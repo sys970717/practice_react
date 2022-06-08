@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import theme from "@/assets/styles/theme";
+import theme from "@/assets/styles/theme"
 
 export default class MyDocument extends Document {
     render() {
@@ -7,8 +7,15 @@ export default class MyDocument extends Document {
             <Html lang="ko">
                 <Head>
                     <meta name="description" content="Test Front" />
-                    <meta name="theme-color" content={theme.paletee.primary.main} />
+                    <meta name="theme-color" content={theme.palette.primary.main} />
+
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
                 </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
             </Html>
         )
     }

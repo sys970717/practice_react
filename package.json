@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-cmd -f .env.local next dev",
+    "stg": "env-cmd -f .env.stg next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,14 +20,22 @@
     "moment": "^2.29.3",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "reset-css": "^5.0.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.41",
     "@types/react": "^18.0.12",
     "@types/styled-components": "^5.1.25",
+    "babel-core": "^6.26.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-styled-components": "^2.0.7",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
-    "typescript": "^4.7.3"
+    "prettier": "^2.6.2",
+    "typescript": "4.7.3"
   }
 }
